@@ -58,7 +58,7 @@ function onError(error) {
     throw error;
   }
 
-  var bind = typeof port === 'localhost'
+  var bind = typeof port === '139.59.87.170'
     ? 'Pipe ' + port
     : 'Port ' + port;
 
