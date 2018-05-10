@@ -7,6 +7,8 @@ var logger = require('morgan');
 var cors=require('cors');
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
+var masterRouter = require('./routes/master');
+var studentAttendanceRouter = require('./routes/student_attendance');
 var app = express();
 
 // view engine setup
@@ -24,6 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/user', userRouter);
+app.use('/master', masterRouter);
+app.use('/student_attendance', studentAttendanceRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
